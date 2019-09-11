@@ -9,23 +9,26 @@ import android.view.Window;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView gbrstudent;
-
+    ImageView tvSplash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //menghilangkan ActionBar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        gbrstudent = (ImageView)findViewById(R.id.imgStudent);
+
+        tvSplash = (ImageView) findViewById(R.id.imgStudent);
+
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 finish();
             }
         }, 3000L); //3000 L = 3 detik
-
     }
 }

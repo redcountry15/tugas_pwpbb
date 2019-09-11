@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtnmr"
+            />
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtnmr"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@drawable/ic_create_black_24dp"
+            android:id="@+id/edtnmr"
+            android:hint="0"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtnama"
+            android:layout_below="@id/edtnmr"
+
+            />
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtnama"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@drawable/ic_group_black_24dp"
+            android:id="@+id/edtnama"
+            android:hint="Jalanudin"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Lahir"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/txttgllahir"
+            android:layout_below="@id/edtnama"
+            />
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txttgllahir"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:id="@+id/edttgllahir"
+            android:hint="1996-07-11"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:layout_below="@id/edttgllahir"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtjeniskelamin"
+            />
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtjeniskelamin"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:id="@+id/edtjenkel"
+            android:hint="L"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:layout_below="@id/edtjenkel"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtAlamat"
+            />
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAlamat"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@drawable/ic_place_black_24dp"
+            android:id="@+id/edtalamat"
+            android:hint="Rangkas Bitung"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_save_black_24dp"
+            android:background="#ffffff"
+            android:layout_below="@id/edtalamat"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:text="SIMPAN"
+            android:layout_marginRight="20dp"
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>
