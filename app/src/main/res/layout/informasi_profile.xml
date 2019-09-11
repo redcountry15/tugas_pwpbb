@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/student1"
+        android:layout_marginTop="70dp"
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ImagePensil"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_create_black_24dp"
+            />
+        <TextView
+            android:id="@+id/textNomor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor"
+            android:layout_toEndOf="@id/ImagePensil"
+            android:layout_marginTop="24dp"
+            />
+        <EditText
+            android:layout_marginTop="-12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ImagePensil"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageOrang"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_group_black_24dp"
+            />
+        <TextView
+            android:id="@+id/textOrang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_toEndOf="@id/imageOrang"
+            android:layout_marginTop="24dp"
+            />
+        <EditText
+            android:layout_marginTop="-12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageOrang"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageTanggal"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date_range_black_24dp"
+            />
+        <TextView
+            android:id="@+id/textTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Lahir"
+            android:layout_toEndOf="@id/imageTanggal"
+            android:layout_marginTop="24dp"
+            />
+        <EditText
+            android:layout_marginTop="-12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageTanggal"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ImageJenis"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person_black_24dp"
+            />
+        <TextView
+            android:id="@+id/textJenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:layout_toEndOf="@id/ImageJenis"
+            android:layout_marginTop="24dp"
+            />
+        <EditText
+            android:layout_marginTop="-12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ImageJenis"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ImageAlamat"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place_black_24dp"
+            />
+        <TextView
+            android:id="@+id/textAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor"
+            android:layout_toEndOf="@id/ImageAlamat"
+            android:layout_marginTop="24dp"
+            />
+        <EditText
+            android:layout_marginTop="-12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ImageAlamat"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
