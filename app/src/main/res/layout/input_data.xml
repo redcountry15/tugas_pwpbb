@@ -113,15 +113,17 @@
             />
 
         <Button
+            android:id="@+id/btnKirim"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_save_black_24dp"
-            android:background="#ffffff"
+            android:layout_height="37dp"
             android:layout_below="@id/edtalamat"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="40dp"
-            android:text="SIMPAN"
+            android:layout_marginTop="51dp"
             android:layout_marginRight="20dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/ic_save_black_24dp"
+            android:text="Simpan"
+            android:textAllCaps="false"
 
             />
     </RelativeLayout>

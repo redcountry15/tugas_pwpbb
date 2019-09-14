@@ -21,8 +21,8 @@ private static final String KEY_BORN  ="tanggal_lahir";
 private static final String KEY_GENDER  ="jenis_kelamin";
 private static final String KEY_ADDRESS ="alamat_murid";
 
-    public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DB_NAME, factory, DB_VERSION);
+    public DatabaseHelper(Context context) {
+        super(context, DB_NAME,null, DB_VERSION);
     }
 
     @Override
@@ -33,6 +33,34 @@ private static final String KEY_ADDRESS ="alamat_murid";
           sqLiteDatabase.execSQL(createUserTable);
 
     }
+
+    public List<Siswa> selectedSiswa(){
+        ArrayList<Siswa> siswa = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        String[] columns ={KEY_NOMOR,KEY_NAME,KEY_BORN,KEY_GENDER,KEY_ADDRESS};
+
+        Cursor c = db.query(TABLE_NAME,columns,null,null,null,null,null);
+
+        while (c.moveToNext()){
+            int no = c.getInt(0);
+            String nama= c.getString(1);
+            String lahir = c.getString(2);
+            String gender = c.getString(3);
+            String Alamat = c.getString(4);
+
+            Siswa inisiswa = new Siswa();
+            inisiswa.setNoSiswa(no);
+            inisiswa.setNama(nama);
+            inisiswa.setDate(lahir);
+            inisiswa.setJenisKelamin(gender);
+            inisiswa.setAlamat(Alamat);
+
+        }
+        return siswa;
+    }
+
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
@@ -80,6 +108,19 @@ private static final String KEY_ADDRESS ="alamat_murid";
      SQLiteDatabase database = getWritableDatabase();
      String whereClause = KEY_NOMOR+"='"+noSiswa+"'";
      database.delete(TABLE_NAME,whereClause,null);
+    }
+
+    public  void update(Siswa siswa){
+        SQLiteDatabase db =getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_NOMOR,siswa.getNoSiswa());
+        values.put(KEY_NAME,siswa.getNama());
+        values.put(KEY_BORN,siswa.getDate());
+        values.put(KEY_GENDER,siswa.getJenisKelamin());
+        values.put(KEY_ADDRESS,siswa.getAlamat());
+        String WhereClause = KEY_NOMOR+"='"+siswa.getNoSiswa()+"'";
+        db.update(TABLE_NAME,values,WhereClause,null);
+
     }
 
 }
