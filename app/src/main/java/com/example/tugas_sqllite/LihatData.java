@@ -68,8 +68,8 @@ public class LihatData extends AppCompatActivity implements RecyclerViewAdapter.
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                Intent ubah = new Intent(context,InputData.class);
-               ubah.putExtra("UPDATE_INTENT", (Parcelable) siswa);
-               ubah.putExtra("UDPATE_ACTION","updaete");
+               ubah.putExtra("UPDATE_INTENT",siswa);
+               ubah.putExtra("UPDATE_ACTION","Update");
                context.startActivity(ubah);
 
             }
@@ -78,8 +78,8 @@ public class LihatData extends AppCompatActivity implements RecyclerViewAdapter.
         alerDialog.setNeutralButton("Detail Data", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent detail = new Intent(context,Informasi.class);
-                detail.putExtra("DETAIL_INTENT", (Parcelable) siswa);
+                Intent detail = new Intent(context,InfoSiswa.class);
+                detail.putExtra("DETAIL_INTENT",siswa);
                 context.startActivity(detail);
             }
         });

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Biodata"></activity>
+        <activity android:name=".InfoSiswa"></activity>
+        <activity android:name=".Biodata" />
         <activity android:name=".LihatData" />
         <activity android:name=".InputData" />
         <activity android:name=".HomeActivity" />

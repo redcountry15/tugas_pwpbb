@@ -3,6 +3,7 @@ package com.example.tugas_sqllite;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +19,7 @@ public class InputData extends AppCompatActivity implements View.OnClickListener
     Button btnSubmit;
     Context context;
     String aksi,nomor;
-    Siswa updaete;
+    Siswa update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +35,26 @@ public class InputData extends AppCompatActivity implements View.OnClickListener
         btnSubmit = findViewById(R.id.btnKirim);
 
         aksi  = getIntent().getStringExtra("UPDATE_ACTION");
-        updaete = getIntent().getParcelableExtra("UPDATE_INTENT");
+        update = getIntent().getParcelableExtra("UPDATE_INTENT");
 
         if (aksi==null){
             aksi="Simpan";
         }else {
-            nomor=String.valueOf(updaete.getNoSiswa());
+            nomor=String.valueOf(update.getNoSiswa());
+        }
+
+        if (aksi.equals("Update")){
+            btnSubmit.setText("Update");
+            editnom.setText(nomor);
+            editnom.setFocusable(false);
+
+            editname.setText(update.getNama());
+            date.setText(update.getDate());
+            editgender.setText(update.getJenisKelamin());
+            editalamat.setText(update.getAlamat());
+
+            Log.d("Updated",update.getNama());
+
         }
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -58,13 +73,15 @@ public class InputData extends AppCompatActivity implements View.OnClickListener
                     db.insert(siswa);
                     startActivity(new Intent(context,LihatData.class));
 
-                }else{
+                }if(btnState.equals("Update")){
                     siswa.setNoSiswa(Integer.parseInt(editnom.getText().toString()));
                     siswa.setNama(editname.getText().toString());
                     siswa.setJenisKelamin(editgender.getText().toString());
                     siswa.setDate(date.getText().toString());
                     siswa.setAlamat(editalamat.getText().toString());
                     db.update(siswa);
+                    Intent pindah = new Intent(context,LihatData.class);
+                    context.startActivity(pindah);
 
                 }
             }
