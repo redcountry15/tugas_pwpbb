@@ -37,7 +37,7 @@ public class InputData extends AppCompatActivity implements View.OnClickListener
         updaete = getIntent().getParcelableExtra("UPDATE_INTENT");
 
         if (aksi==null){
-            aksi="Submit";
+            aksi="Simpan";
         }else {
             nomor=String.valueOf(updaete.getNoSiswa());
         }

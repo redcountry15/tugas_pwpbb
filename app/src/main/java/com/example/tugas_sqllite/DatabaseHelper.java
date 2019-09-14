@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
@@ -27,9 +26,7 @@ private static final String KEY_ADDRESS ="alamat_murid";
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String createUserTable="Create Table "
-                +TABLE_NAME+"("+KEY_NOMOR+" INTEGER PRIMARY KEY,"
-                +KEY_NAME+" STRING,"+KEY_BORN+" STRING,"+KEY_GENDER+" STRING,"+KEY_ADDRESS+" STRING"+")";
+        String createUserTable="Create Table "+TABLE_NAME+"("+KEY_NOMOR+" INTEGER PRIMARY KEY," +KEY_NAME+" TEXT,"+KEY_BORN+" TEXT,"+KEY_GENDER+" TEXT,"+KEY_ADDRESS+" TEXT"+")";
           sqLiteDatabase.execSQL(createUserTable);
 
     }
@@ -54,12 +51,11 @@ private static final String KEY_ADDRESS ="alamat_murid";
             inisiswa.setDate(lahir);
             inisiswa.setJenisKelamin(gender);
             inisiswa.setAlamat(Alamat);
+            siswa.add(inisiswa);
 
         }
         return siswa;
     }
-
-
 
 
     @Override

@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_info:
-                Intent informasi = new Intent(HomeActivity.this,Informasi.class);
+                Intent informasi = new Intent(HomeActivity.this,Biodata.class);
                 startActivity(informasi);
                 break;
             default:
